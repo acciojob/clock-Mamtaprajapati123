@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+  <head>
+    <title>Dynamic Timer Example</title>
+    <script>
+      function updateTime() {
+        var now = new Date();
+        var time = now.toLocaleTimeString();
+        var date = now.toLocaleDateString();
+        document.getElementById("timer").innerHTML = time + " " + date;
+      }
+      
+      setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <p id="timer"></p>
+  </body>
 </html>
